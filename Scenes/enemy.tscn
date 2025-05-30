@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://csrgloei8lesy"]
+
+[ext_resource type="Script" uid="uid://be56uqc67xvf8" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://dqmoqb8uev4su" path="res://Assets/Sprites/sorlo super sheet-Photoroom.png" id="1_hghv2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f0kj"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(475, 15, 72, 71)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afpow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f0kj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_287tu"]
+radius = 16.0
+height = 58.0
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_1f0kj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_afpow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_287tu")
