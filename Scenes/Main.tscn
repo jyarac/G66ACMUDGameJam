@@ -13,10 +13,10 @@ position = Vector2(280, 110)
 script = ExtResource("3_rgh2o")
 
 [node name="Enemy" parent="." instance=ExtResource("4_rgh2o")]
-position = Vector2(1101, 146)
+position = Vector2(1146, 146)
 
 [node name="Enemy2" parent="." instance=ExtResource("4_rgh2o")]
-position = Vector2(30, 191)
+position = Vector2(9, 183)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(579, 320)
